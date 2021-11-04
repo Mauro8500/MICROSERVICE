@@ -2,10 +2,8 @@ package arquitectura.software.mscostumer.api;
 
 import arquitectura.software.mscostumer.entity.Customer;
 import arquitectura.software.mscostumer.repository.CustomerRepository;
-
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.CustomAutowireConfigurer;
 import org.springframework.web.bind.annotation.RequestBody;
