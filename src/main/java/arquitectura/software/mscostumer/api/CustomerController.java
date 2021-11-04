@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.CustomAutowireConfigurer;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,8 +28,9 @@ public class CustomerController{
         return "Ms-customer";
     }
 
-    @RequestMapping(path = "/save", method = RequestMethod.POST)
-    public Customer saveCustomer(Customer customer){
+    @RequestMapping(path = "/save",
+                     method = RequestMethod.POST)
+    public Customer saveCustomer(@RequestBody Customer customer){
        return customerRepository.save(customer);
     }
 
