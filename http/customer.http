@@ -1,4 +1,4 @@
-### Registrar cliente
+### Registrar cliente por MS-COSTUMER
 POST http://localhost:9091/v1/api/customer/save
 Content-Type: application/json 
 
@@ -7,6 +7,21 @@ Content-Type: application/json
     "lastName": "Illanes",
     "email": "Juan@ucb.edu.bo"
 }
+
+### Registrar cliente pasando por GATEWAY
+POST http://localhost:8282/ms-custumer/v1/api/customer/save
+Content-Type: application/json 
+
+{
+    "name": "Juan",
+    "lastName": "Illanes",
+    "email": "Juan@ucb.edu.bo"
+}
+
+### refrescar actuator
+POST http://localhost:9091/actuator/refresh
+
+
 
 #### Obtener todos los cliente
 GET http://localhost:9091/v1/api/customer/all
