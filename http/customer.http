@@ -1,3 +1,7 @@
+#### 
+GET http://localhost:9091/v1/api/customer/test
+Accept: application/json
+
 ### Registrar cliente por MS-COSTUMER
 POST http://localhost:9091/v1/api/customer/save
 Content-Type: application/json 

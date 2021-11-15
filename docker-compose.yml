@@ -1,0 +1,20 @@
+version: "2.4"
+
+services:
+  ms-discovery:
+    image: ms-discovery:0.0.1
+    mem_limit: 150m
+    ports:
+    - "8761:8761"
+   # environment:
+    #- "EUREKA_URI=http://192.168.0.159:8761/eureka"
+  ms-costumer:
+    image: ms-costumer:0.0.1
+    mem_limit: 200m
+    ports:
+    - "9091:9091"
+    environment:
+    - "EUREKA_URI=http://192.168.0.159:8761/eureka"
+    depends_on:
+    ms-discovery:
+      condition: service_started
